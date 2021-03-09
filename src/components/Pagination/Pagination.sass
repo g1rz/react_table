@@ -1,0 +1,26 @@
+@import '../../_variables.sass'
+
+.pagination 
+    display: flex 
+    flex-wrap: wrap 
+    list-style: none
+    margin: 10px 0
+    &__item 
+        margin-right: 5px
+        &:last-child 
+            margin-right: 0
+    &__btn 
+        padding: 5px
+        border: 1px solid $mainColor 
+        background-color: $mainColor
+        border-radius: 5px
+        color: #fff
+        outline: none
+        cursor: pointer
+        &:hover 
+            background-color: $secondColor
+        &:active 
+            background-color: darken($secondColor, 20%)
+        &--active 
+            background-color: $secondColor
+            color: $mainColor

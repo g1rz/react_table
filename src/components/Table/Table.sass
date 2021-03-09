@@ -1,0 +1,49 @@
+@import '../../_variables.sass'
+    
+.table 
+    width: 100%
+    background: $mainColor
+    color: #fff
+    border-radius: 5px
+    border-collapse: collapse
+    &__filter 
+        display: block
+        cursor: pointer
+        &::after
+            content: ''
+            display: inline-block
+            margin-left: 10px
+            border-top: 5px solid transparent
+            border-left: 10px solid $secondColor
+            border-bottom: 5px solid transparent
+            transition: 0.3s ease
+        &.desc
+            &:after 
+                transform: rotate(90deg)
+        &.asc 
+            &:after 
+                transform: rotate(-90deg)
+    th 
+        color: $secondColor
+        &:nth-child(1)
+            width: 10%
+        &:nth-child(2)
+            width: 20%
+        &:nth-child(3)
+            width: 20%
+        &:nth-child(4)
+            width: 50%
+    th, td 
+        padding: 10px
+        border-right: 1px solid #ccc 
+        &:first-child 
+            text-align: center
+        &:last-child 
+            border-right: none
+    tr
+        border-bottom: 1px solid #ccc
+    tbody 
+        tr
+            &:last-child 
+                border-bottom: none
+    
